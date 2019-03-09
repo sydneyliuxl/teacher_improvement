@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  ActiveAdmin.routes(self)
   root :to => "improvement_plans#index"
   # Routes for the Goal resource:
 
