@@ -1,4 +1,3 @@
-<!-- Validation failure messages -->
 <% if @goal.present? %>
   <% if @goal.errors.any? %>
     <% @goal.errors.full_messages.each do |message| %>
@@ -16,9 +15,7 @@
 
 <hr>
 
-<!-- Form goal start -->
 <form action="/create_goal" method="post">
-<!-- Form goal end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create goal

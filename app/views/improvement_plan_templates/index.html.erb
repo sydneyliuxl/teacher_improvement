@@ -10,17 +10,13 @@
   </div>
 </div>
 
-<!-- Ransack Code start -->
 <div class="row">
   <div class="col-md-12 mb-3">
     <%= render partial: "improvement_plan_templates/improvement_plans_search_form" %>
   </div>
 </div>
-<!-- Ransack Code end -->
 
-<!-- Location Map Code start -->
 
-<!-- Location Map Code end -->
 
 <hr>
 
@@ -54,35 +50,25 @@
 
       <% @improvement_plans.each do |improvement_plan| %>
       <tr>
-        <!-- Display improvement_plan.id start -->
         <td>
           <%= improvement_plan.id %>
         </td>
-        <!-- Display improvement_plan.id end -->
 
-        <!-- Display improvement_plan.description start -->
         <td>
           <%= improvement_plan.description %>
         </td>
-        <!-- Display improvement_plan.description end -->
 
-        <!-- Display improvement_plan.status start -->
         <td>
           <%= improvement_plan.status %>
         </td>
-        <!-- Display improvement_plan.status end -->
 
-        <!-- Display improvement_plan.created_at start -->
         <td>
           <%= time_ago_in_words(improvement_plan.created_at) %> ago
         </td>
-        <!-- Display improvement_plan.created_at end -->
 
-        <!-- Display improvement_plan.updated_at start -->
         <td>
           <%= time_ago_in_words(improvement_plan.updated_at) %> ago
         </td>
-        <!-- Display improvement_plan.updated_at end -->
 
         <td>
           <a href="/improvement_plans/<%= improvement_plan.id %>">

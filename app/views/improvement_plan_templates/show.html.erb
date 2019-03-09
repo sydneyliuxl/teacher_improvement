@@ -11,62 +11,48 @@
         </a>
       </div>
 
-      <!-- Edit link improvement_plan start -->
       <div class="col">
         <a href="/improvement_plans/<%= @improvement_plan.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit improvement plan
         </a>
       </div>
-      <!-- Edit link improvement_plan end -->
 
-      <!-- Delete link improvement_plan start -->
       <div class="col">
         <a href="/delete_improvement_plan/<%= @improvement_plan.id %>" class="btn btn-block btn-outline-secondary">
           Delete improvement plan
         </a>
       </div>
-      <!-- Delete link improvement_plan end -->
     </div>
 
     <dl>
       <dt>
         Description
       </dt>
-      <!-- Display description start -->
       <dd>
         <%= @improvement_plan.description %>
       </dd>
-      <!-- Display description end -->
 
       <dt>
         Status
       </dt>
-      <!-- Display status start -->
       <dd>
         <%= @improvement_plan.status %>
       </dd>
-      <!-- Display status end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@improvement_plan.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@improvement_plan.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->
