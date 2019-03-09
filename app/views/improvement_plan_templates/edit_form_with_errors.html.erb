@@ -1,0 +1,53 @@
+<!-- Validation failure messages -->
+<% if @improvement_plan.errors.any? %>
+  <% @improvement_plan.errors.full_messages.each do |message| %>
+    <div class="alert">
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<h1>
+  Edit improvement plan #<%= @improvement_plan.id %>
+</h1>
+
+<hr>
+
+<!-- Form improvement_plan start -->
+<form action="/update_improvement_plan/<%= @improvement_plan.id %>" method="post">
+<!-- Form improvement_plan end -->
+
+  <!-- Label and input for description start -->
+  <div class="form-group">
+    <label for="description">
+      Description
+    </label>
+
+    <!-- Input for description start -->
+    <input type="text" id="description" name="description" class="form-control" value="<%= @improvement_plan.description %>">
+    <!-- Input for description end -->
+  </div>
+  <!-- Label and input for description end -->
+
+  <!-- Label and input for status start -->
+  <div class="form-group">
+    <label for="status">
+      Status
+    </label>
+
+    <!-- Input for status start -->
+    <input type="text" id="status" name="status" class="form-control" value="<%= @improvement_plan.status %>">
+    <!-- Input for status end -->
+  </div>
+  <!-- Label and input for status end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update improvement plan
+  </button>
+</form>
+
+<hr>
+
+<a href="/improvement_plans">
+  Go back
+</a>
