@@ -1,0 +1,20 @@
+<h1>
+  Edit goal #<%= @goal.id %>
+</h1>
+
+<hr>
+
+<!-- Form goal start -->
+<form action="/update_goal/<%= @goal.id %>" method="post">
+<!-- Form goal end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update goal
+  </button>
+</form>
+
+<hr>
+
+<a href="/goals">
+  Go back
+</a>

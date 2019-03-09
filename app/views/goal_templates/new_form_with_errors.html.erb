@@ -1,0 +1,32 @@
+<!-- Validation failure messages -->
+<% if @goal.present? %>
+  <% if @goal.errors.any? %>
+    <% @goal.errors.full_messages.each do |message| %>
+      <div class="alert alert-danger">
+        <%= message %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h1>
+  Add a new goal
+</h1>
+
+
+<hr>
+
+<!-- Form goal start -->
+<form action="/create_goal" method="post">
+<!-- Form goal end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create goal
+  </button>
+</form>
+
+<hr>
+
+<a href="/goals">
+  Go back
+</a>
