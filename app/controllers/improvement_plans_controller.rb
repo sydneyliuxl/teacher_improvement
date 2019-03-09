@@ -1,6 +1,6 @@
 class ImprovementPlansController < ApplicationController
   def index
-    @improvement_plans = ImprovementPlan.all
+    @improvement_plans = ImprovementPlan.page(params[:page]).per(10)
 
     render("improvement_plan_templates/index.html.erb")
   end

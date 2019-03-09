@@ -1,6 +1,6 @@
 class GoalsController < ApplicationController
   def index
-    @goals = Goal.all
+    @goals = Goal.page(params[:page]).per(10)
 
     render("goal_templates/index.html.erb")
   end
