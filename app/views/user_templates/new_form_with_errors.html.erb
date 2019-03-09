@@ -1,0 +1,44 @@
+<!-- Validation failure messages -->
+<% if @user.present? %>
+  <% if @user.errors.any? %>
+    <% @user.errors.full_messages.each do |message| %>
+      <div class="alert alert-danger">
+        <%= message %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h1>
+  Add a new user
+</h1>
+
+
+<hr>
+
+<!-- Form user start -->
+<form action="/create_user" method="post">
+<!-- Form user end -->
+
+  <!-- Label and input for name start -->
+  <div class="form-group">
+    <label for="name">
+      Name
+    </label>
+
+    <!-- Input for name start -->
+    <input type="text" id="name" name="name" class="form-control" value="<%= @user.name %>">
+    <!-- Input for name end -->
+  </div>
+  <!-- Label and input for name end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create user
+  </button>
+</form>
+
+<hr>
+
+<a href="/users">
+  Go back
+</a>
